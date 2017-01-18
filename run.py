@@ -7,7 +7,7 @@ def index():
     if request.method == 'POST':
         firstname = request.json['first_name']
         lastname = request.json['last_name']
-        return firstname + lastname[1]
+        return jsonify(result1=firstname, result2=lastname[1])
     else:
         return "<h1> This is Index Page</h1>"
 
